@@ -22,28 +22,14 @@ public class RickrollingTogetherMod : BaseUnityPlugin
         player ??= ReInput.players.GetPlayer(0);
         if (player.controllers.Keyboard.GetKeyDown(KeyCode.N))
         {
-            LogGameObjects();
-        }
-    }
-
-    // ----- Private Methods
-
-    private void LogGameObjects()
-    {
-        var supermarket = GameObject.Find("Level_Supermarket");
-
-        using var writer = new StreamWriter(logFilePath, false);
-        LogGameObjectChildrenRecursively(supermarket, writer);
-    }
-
-    private void LogGameObjectChildrenRecursively(GameObject gameObject, StreamWriter writer, int indentLvl = 0)
-    {
-        string indent = new(' ', 2 * indentLvl);
-        writer.WriteLine(indent + gameObject.name);
-
-        foreach (Transform child in gameObject.transform)
-        {
-            LogGameObjectChildrenRecursively(child.gameObject, writer, ++indentLvl);
+            foreach (var rend in FindObjectsByType<Renderer>(FindObjectsSortMode.None))
+            {
+                if (rend.material.mainTexture is RenderTexture)
+                {
+                    using var writer = new StreamWriter(logFilePath, append: false);
+                    writer.WriteLine(rend.name);
+                }
+            }
         }
     }
 }
