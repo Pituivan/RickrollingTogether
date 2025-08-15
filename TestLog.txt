@@ -1,0 +1,40 @@
+----- ACTIVE GAMEOBJECTS:
+LocalGamePlayer
+45_ZZCleanerAgent(Clone)
+Broom_00_Normal(Clone)
+WindowsWebPlugin
+WebView Thread Dispatcher
+BepInEx_Manager
+BepInEx_ThreadingHelper
+MasterOBJ
+GameRestart
+DontDestroy_Never
+Level_SupermarketProps
+Expansions
+Kof_WorldCanvas
+Virtual Camera
+Player_Camera
+Auxiliar
+__________________________________________________________________
+GameCanvas
+TEMP_FLOOR
+GachaPlace
+NPC_Manager
+__________________________________________________________________
+PaintablesParent
+Interactables
+__________________________________________________________________
+GameDataManager
+Navmesh
+Lighting
+Level_Departments
+SceneManager
+Level_Supermarket
+Level_Exterior
+TheCoolRoom
+Navmesh_Employees
+DemolishablesParent
+LocalNetworkManager
+----- NON-ACTIVE GAMEOBJECTS:
+OnlineNetworkManager
+PaintablesData
